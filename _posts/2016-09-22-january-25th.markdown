@@ -8,12 +8,12 @@ layout: post
 ---
 
 A visual sequence of events that happened during the revolution in Egypt.
-<img class="cover" src="/uploads/jan25_1.png"/>
-<img class="left" src="/uploads/jan25_2.png"/>
-<img class="center" src="/uploads/jan25_3.png"/>
-<img class="right" src="/uploads/jan25_4.png"/>
-<img class="left" src="/uploads/jan25_5.png"/>
-<img class="center" src="/uploads/jan25_6.png"/>
-<img class="right" src="/uploads/jan25_7.png"/>
-<img class="cover" src="/uploads/jan25_9.png"/>
-<img class="left" src="/uploads/jan25_8.png"/>
+<img class="cover" src="/_uploads/jan25_1.png"/>
+<img class="left" src="/_uploads/jan25_2.png"/>
+<img class="center" src="/_uploads/jan25_3.png"/>
+<img class="right" src="/_uploads/jan25_4.png"/>
+<img class="left" src="/_uploads/jan25_5.png"/>
+<img class="center" src="/_uploads/jan25_6.png"/>
+<img class="right" src="/_uploads/jan25_7.png"/>
+<img class="cover" src="/_uploads/jan25_9.png"/>
+<img class="left" src="/_uploads/jan25_8.png"/>
