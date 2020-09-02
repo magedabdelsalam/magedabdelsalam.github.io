@@ -1,0 +1,19 @@
+---
+title: January 25th
+date: 2016-09-22 23:06:00 Z
+permalink: "/:title"
+tags:
+- visual
+layout: post
+---
+
+A visual sequence of events that happened during the revolution in Egypt.
+<img class="cover" src="/uploads/jan25_1.png"/>
+<img class="left" src="/uploads/jan25_2.png"/>
+<img class="center" src="/uploads/jan25_3.png"/>
+<img class="right" src="/uploads/jan25_4.png"/>
+<img class="left" src="/uploads/jan25_5.png"/>
+<img class="center" src="/uploads/jan25_6.png"/>
+<img class="right" src="/uploads/jan25_7.png"/>
+<img class="cover" src="/uploads/jan25_9.png"/>
+<img class="left" src="/uploads/jan25_8.png"/>
