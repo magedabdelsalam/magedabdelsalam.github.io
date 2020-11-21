@@ -11,6 +11,7 @@ function Boomspace() {
     return(
         <article>
             <section>
+                <h1>Boomspace Workshop</h1>
                 <p>An Introduction to Web Development in Baltimore city with Vincent Purcell.</p>
                 <img className="cover" src={boomspace_1} alt="" />
                 <img className="left" src={boomspace_2} alt="" />

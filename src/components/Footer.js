@@ -17,7 +17,7 @@ function Footer() {
                 <a href={resume}>Resume</a>
               </li>
             </ul>
-            <p>&copy; Maged Abdelsalam - <a href="http://www.magedabdelsalam.com/">Home</a></p>
+            <p>&copy; Maged Abdelsalam - <a href="/">Home</a></p>
         </footer>
     )
 }

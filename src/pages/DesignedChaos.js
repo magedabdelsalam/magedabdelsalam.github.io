@@ -8,6 +8,7 @@ function DesignedChaos() {
     return(
         <article>
             <section>
+                <h1>Designed Chaos</h1>
                 <p>A visual exploration of balance.</p>
                 <img className="left" src={designedchaos_1} alt="" />
                 <img className="center" src={designedchaos_2} alt="" />

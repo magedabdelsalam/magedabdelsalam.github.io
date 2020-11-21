@@ -1,8 +1,10 @@
 import React from "react";
+import Header from '../components/Header'
 
 function Home() {
     return(
         <article>
+            <Header/>
             <section>
                 <h2>Work</h2>
                 <ul>

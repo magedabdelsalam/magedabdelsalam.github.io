@@ -13,6 +13,7 @@ function January25th() {
     return(
         <article>
             <section>
+                <h1>January 25th</h1>
                 <p>A visual sequence of events that happened during the revolution in Egypt.</p>
                 <img className="cover" src={jan25_1} alt="" />
                 <img className="left" src={jan25_2} alt="" />

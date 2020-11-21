@@ -11,6 +11,7 @@ function ThreeVessels() {
     return(
         <article>
             <section>
+                <h1>3 Vessels</h1>
                 <p>A card game that simulates; life, death, and afterlife through a sequence of events. In each event you are given a set of options on how to behave. A behavior is composed of both an action, and an intention. For each, you can choose between emotion, logic, and faith. The goal is to either, win the most events with the strongest behavior, or achieve a good balance of the total behaviors at the end of the game.</p>
                 <p>The game is not for sale at the moment.</p>
                 <img className="cover" src={threeVessels_1} alt=""/>
