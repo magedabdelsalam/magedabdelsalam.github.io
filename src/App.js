@@ -1,6 +1,6 @@
 // React
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // Components
 import Footer from './components/Footer'
 // Pages

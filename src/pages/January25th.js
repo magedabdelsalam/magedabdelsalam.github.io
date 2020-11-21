@@ -22,8 +22,8 @@ function January25th() {
                 <img className="left" src={jan25_5} alt="" />
                 <img className="center" src={jan25_6} alt="" />
                 <img className="right" src={jan25_7} alt="" />
-                <img className="cover" src={jan25_8} alt="" />
-                <img className="left" src={jan25_9} alt="" />
+                <img className="cover" src={jan25_9} alt="" />
+                <img className="left" src={jan25_8} alt="" />
             </section>
         </article>
     )
