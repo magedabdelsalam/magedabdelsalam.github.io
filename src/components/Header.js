@@ -1,15 +1,30 @@
-import React from "react";
-import profile from "../imgs/maged.png"
+import {BrowserRouter as Router,Link } from "react-router-dom";
 
-function Header() {
+const Header = () => {
+    let today = Date();
+    today = today.substring(0,16);
     return(
-        <header>
-            <h1>Maged Abdelsalam</h1>
-            <img className="right" src={profile} alt="Maged Abdelsalam's profile" />
-            <p>Full stack web developer with product and visual design experience. Holds a graduate degree from Maryland Institute College of Arts and a Full-stack Development Certificate from University of Washington.</p>
-            <p>Skills in HTML, CSS,  JavaScript, React, Node and a dedication to meeting tight deadlines. Successfully rebranded multiple non-profit organizations and startups, which accelerated their growth</p>
-            <p>Passionate about approaching new problems from different creative angles and collaborating with others to create modern web applications. Excited to develop mobile responsive web applications that are easy to use and beautiful to look at.</p>
-            <p>Positioned to provide a unique perspective on how end users interact with web applications by using  my background in design and development.</p>
+        <header className='header'>
+            <div className='localization'>
+                <div className='todaysDate'>
+                    <p>{today}</p>
+                </div>
+                <div className='preferredLanguage'>
+                    <Router>
+                    <ul>
+                        <li>
+                            <Link to="/">English</Link>
+                        </li>
+                        <li>
+                            <Link to="/ar">Arabic</Link>
+                        </li>
+                    </ul>
+                    </Router>                
+                </div>
+                <div className='officeHours'>
+                    <p>Mon-Thurs 6PM-3PM PST</p>
+                </div>
+            </div>
         </header>
     )
 }

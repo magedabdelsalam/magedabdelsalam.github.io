@@ -1,27 +1,18 @@
-import React from "react";
-import Header from '../components/Header'
+import Section from '../components/Section'
+import Products from '../components/Products'
+import Process from '../components/Process'
+import Clients from '../components/Clients'
+import Chat from '../components/Chat'
 
-function Home() {
+const Home = () => {
     return(
-        <article>
-            <Header/>
-            <section>
-                <h2>Work</h2>
-                <ul>
-                    {/*<li><a href="https://choicemap.co/">ChoiceMap</a>↗ (social, visual, interaction)</li>*/}
-                    <li><a href="http://www.bramblelab.com">Bramble Lab</a>↗ (social, visual, interaction)</li>
-                    <li><a href="https://boiling-beach-31279.herokuapp.com/">PODS</a>↗ (interaction)</li>
-                    <li><a href="https://maxhanson07.github.io/Indecisive/">nDecisive</a>↗ (interaction)</li>
-                    <li><a href="weather-dashboard">Weather Dashboard</a>↗ (interaction)</li>
-                    <li><a href="work-day-scheduler">Work Day Scheduler</a>↗ (interaction)</li>
-                    <li><a href="password-generator">Password Generator</a>↗ (interaction)</li>
-                    <li><a href="code-quiz">Dune Quiz</a>↗ (interaction)</li>
-                    <li><a href="#/designed-chaos">Designed Chaos Collection</a>↗ (visual)</li>
-                    <li><a href="#/boomspace-workshop">Boomspace Workshop</a>↗ (social)</li>
-                    <li><a href="#/january-25th">January 25th, 2011 Posters</a>↗ (social, visual)</li>
-                    <li><a href="#/three-vessels">3 Vessels</a>↗ (social, visual, interaction)</li>
-                </ul>
-            </section>
+        <article className='home'>
+            <Chat title="Hi. I'm Maged Abdelsalam Ma-jed Ab-dl-salam" content="A product designer based in the Seattle Area."/>
+            <Section title={"Products"} content={<Products/>}/>
+            <Chat title="People before product" content="Let's chat. Email me at hello @ magedabdelsalam.com"/>
+            <Section title={"Process"} content={<Process/>}/>
+            <Chat title="Hi. I'm Maged Abdelsalam Ma-jed Ab-dl-salam" content="A product designer based in the Seattle Area."/>
+            <Section title={"Clients"} content={<Clients/>}/>
         </article>
     )
 }
