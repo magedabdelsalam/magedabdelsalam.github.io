@@ -1,0 +1,9 @@
+.logo{
+	font-size: 72px;
+	line-height: 84px;
+	margin-bottom: 24px;
+}
+
+.active{
+	color: blue;
+}

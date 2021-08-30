@@ -1,26 +1,38 @@
-// React
+// Packages
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+// Pages
+import Home from './pages/Home'
+import Work from './pages/Work'
+import Page from './pages/Page'
 // Components
 import Header from './components/Header'
 import Footer from './components/Footer'
-// Pages
-import Home from './pages/Home'
 // Styles
 import './App.css';
+import pages from "./data/pages";
 
-function App() {
-  return (
-    <div className='app'>
-		<Header/>
-			<Router>
-				<Switch>
-					<Route exact path="/" component={Home} />
-				</Switch>
-			</Router>
-		<Footer/>
-    </div>
-  );
+const App = () => {
+	const location = useLocation();
+  	return (
+		<div className='app'>
+			<Header />
+				<AnimatePresence exitBeforeEnter>
+						<Switch location={location} key={location.pathname}>
+							<Route exact path="/" component={Home} />
+							{pages.map((page) => (
+								<Route exact path={page.path}>
+									<Page content={page.content}/>
+								</Route>
+							))}
+							<Route exact path="/work" component={Work}/>
+						</Switch>
+				</AnimatePresence>
+			<Footer /> 
+		</div>
+	);
 }
 
 export default App;
