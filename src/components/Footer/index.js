@@ -7,6 +7,8 @@ function Footer() {
     return(
         <footer>
             <hr/>
+            <h3>About Maged Abdelsalam</h3>
+            <p>A product designer and developer based in the Seattle area.</p>
             <ul className='socials'>
                 <li><a href="mailto:hello@magedabdelsalam.com">Email</a></li>
                 <li><a href="https://github.com/magedabdelsalam">Github</a></li>
