@@ -1,74 +1,61 @@
+// Packages
+import React, { useEffect, useState } from "react"
+import { useLocation } from "react-router";
 import { motion } from "framer-motion";
-import React from "react"
-import { useState } from 'react';
-import pages from "../data/pages";
+import { NavHashLink } from "react-router-hash-link";
+// Components
 import Chat from "../components/Chat"
+// Data
+import pages from "../data/pages";
 
-const allCategories = ['All', ...new Set(pages.map(page => page.category))]
+const allCategories = [...new Set(pages.map(page => page.category))]
 
-const Work = () => {
+const Work = ({container}) => {
+    let location = useLocation();
     const [pageItem, setPageItem] = useState(pages)
-    const [category, setCategory] = useState(allCategories)
-    const filter = (category) =>{
-        if(category === 'All'){
+    const [category] = useState(allCategories)
+    const filter = (category) => {
+        if(category === ''){
             return setPageItem(pages)
         }
         const filteredData = pages.filter(page => page.category === category)
         setPageItem(filteredData)
     }
-    const container = {
-        hidden: { 
-            opacity: 0,
-            x: "5vw",
-            transition: {
-                duration: 1,
-                staggerChildren: 1
-            }
-        },
-        show: {
-            opacity: 1,
-            x: "0vw",
-            transition: {
-                duration: 1,
-                staggerChildren: 1
-            }
-        },
-        exit: {
-            opacity: 0,
-            x: "-5vw",
-            transition: {
-                duration: 1,
-            }
-        }
-    }
+
+    useEffect(() => {
+        filter(location.hash.substring(1))
+    },[location])
+
     return(
-        <motion.article
+        <motion.section
         variants={container}
-        initial="hidden"
+        initial="hide"
         animate="show"
         exit="exit"
         >
-            <ul>
-                {category.map((category) => (
-                    <li onClick={()=> (filter(category))}>{category}</li>
-                ))}
-            </ul>
-            <div>
-            {pageItem.map((page, index) => (
-                <Chat
-                key={index}
-                photo={page.photo}
-                title={page.title}
-                subtitle={page.subtitle}
-                thumbnail={page.thumbnail}
-                category={page.category}
-                color={page.color}
-                path={page.path}
-                note={page.note}
-                />
+        <ul className="filter">
+            {category.map((category, index) => (
+                    <li  key={index} onClick={()=> (filter(category))}>
+                        <NavHashLink to={`/work#${category}`}>
+                            {category}
+                        </NavHashLink>
+                    </li>
             ))}
-            </div>
-        </motion.article>
+        </ul>
+        {pageItem.map((page, index) => (
+            <Chat
+            key={index}
+            filter={filter}
+            path={page.path}
+            category={page.category}
+            photo={page.photo}
+            author={page.author}
+            title={page.title}
+            subtitle={page.subtitle}
+            thumbnail={page.thumbnail}
+            />
+        ))}
+        </motion.section>
     )
 }
 

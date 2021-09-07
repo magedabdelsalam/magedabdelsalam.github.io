@@ -1,9 +1,46 @@
 .logo{
-	font-size: 72px;
-	line-height: 84px;
-	margin-bottom: 24px;
+	font-size: 48px;
+	font-weight: 800;
+	line-height: 60px;
+	margin: 24px 0;
+}
+.gallery{
+	font-size: 48px;
+	position: absolute;
+	top: 0;
+	right: 18px;
+}
+
+.filter{
+    display: flex;
+}
+.filter li{
+    margin: 0 24px 0 0;
+    list-style: none;
+}
+
+.design{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.design img{
+	height: auto;
+	width: 100%;
+	padding: 6px;
+}
+
+@media (min-width: 840px){
+	.design img{
+		height: 30vh;
+		width: auto;
+	}
 }
 
 .active{
-	color: blue;
+	font-weight: 800;
+	color:rgba(0,50,150,1);
 }
+
+
+

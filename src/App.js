@@ -1,37 +1,65 @@
 // Packages
 import React from "react";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
+import { Switch, Route, Redirect, useLocation} from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
 // Pages
-import Home from './pages/Home'
 import Work from './pages/Work'
+import Design from "./pages/Design";
 import Page from './pages/Page'
-// Components
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Error from './pages/Error' 
 // Styles
 import './App.css';
+// Data
 import pages from "./data/pages";
 
 const App = () => {
+	const container = {
+        hide: { 
+            opacity: 0,
+            x: "60px",
+            transition:{
+                duration: 0.3,
+            }
+        },
+        show: { 
+            opacity: 1,
+            x: "0px",
+            transition:{
+				duration: 0.3,
+				staggerChildren: 0.1
+            }
+        },
+		exit: { 
+            opacity: 0,
+            x: "-60px",
+            transition:{
+                duration: 0.3,
+            }
+        },
+    }
 	const location = useLocation();
   	return (
-		<div className='app'>
-			<Header />
-				<AnimatePresence exitBeforeEnter>
-						<Switch location={location} key={location.pathname}>
-							<Route exact path="/" component={Home} />
-							{pages.map((page) => (
-								<Route exact path={page.path}>
-									<Page content={page.content}/>
-								</Route>
-							))}
-							<Route exact path="/work" component={Work}/>
-						</Switch>
-				</AnimatePresence>
-			<Footer /> 
-		</div>
+		<AnimatePresence exitBeforeEnter>
+			<Switch location={location} key={location.pathname}>
+				<Route exact path="/">
+					<Redirect to="/work" />
+				</Route>
+				<Route exact path="/work">
+					<Work container={container}/>
+				</Route>
+				<Route exact path="/design">
+					<Design container={container}/>
+				</Route>
+				{pages.map((page,index) => (
+					<Route path={page.path} key={index}>
+						<Page content={page.content} container={container}/>
+					</Route>
+				))}
+				<Route path='*'>
+					<Error container={container}/>
+				</Route>
+			</Switch>
+		</AnimatePresence>
 	);
 }
 
