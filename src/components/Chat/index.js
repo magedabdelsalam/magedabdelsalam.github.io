@@ -49,7 +49,7 @@ const Chat = ({ filter,path,category,photo,author,title,subtitle,thumbnail }) =>
             {photo ? <div className='photo'>
                 <img src={photo} alt={author}/>
             </div> : null}
-            {category || filter ? <NavHashLink to={`/work#${category}`} className='category' activeClassName='selectedCategory' onClick={()=> (filter(category))}>{category}</NavHashLink> : null}
+            {category || filter ? <NavHashLink to={`/#${category}`} className='category' activeClassName='selectedCategory' onClick={()=> (filter(category))}>{category}</NavHashLink> : null}
             {path ? <Link to={path} className='content'>
                 {title ? <h2 className="title">{title}</h2> : null}
                 {subtitle ? <p className="subtitle">{subtitle}</p> : null}

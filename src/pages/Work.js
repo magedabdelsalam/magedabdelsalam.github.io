@@ -36,7 +36,7 @@ const Work = ({container}) => {
         <ul className="filter">
             {category.map((category, index) => (
                     <li  key={index} onClick={()=> (filter(category))}>
-                        <NavHashLink to={`/work#${category}`}>
+                        <NavHashLink to={`/#${category}`}>
                             {category}
                         </NavHashLink>
                     </li>

@@ -13,7 +13,7 @@ const Header = () => {
     }, [pathname]);
     return(
         <header>
-            <div className='logo'><NavLink exact to='/work'>Maged Abdelsalam</NavLink></div>
+            <div className='logo'><NavLink exact to='/'>Maged Abdelsalam</NavLink></div>
             <motion.div 
             className='gallery'
             animate={{ rotate: [10,0,-10,0,10], transition: {repeat: 1, duration: 0.6, ease:"linear"}}}
