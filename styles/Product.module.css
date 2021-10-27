@@ -1,6 +1,6 @@
-.chat{
+.product{
 	position: relative;
-	margin: 12px 0;
+	margin: 12px auto;
 }
 .photo{
 	display: none;
@@ -60,10 +60,6 @@
 	}
 	.category:hover{
 		background: rgba(50,100,200,1);
-		color: rgba(255, 255, 255, 1);
-	}
-	.selectedCategory{
-		background:rgba(0,50,150,1);
 		color: rgba(255, 255, 255, 1);
 	}
 }

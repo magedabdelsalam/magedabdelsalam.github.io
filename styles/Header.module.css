@@ -1,0 +1,22 @@
+.logo{
+	font-size: 48px;
+	font-weight: 800;
+	line-height: 60px;
+	margin: 24px 0;
+}
+
+.nav{
+    display: flex;
+}
+.nav li{
+    margin: 0 24px 0 0;
+    list-style: none;
+}
+
+.active{
+	font-weight: 800;
+	color:rgba(0,50,150,1);
+}
+
+
+

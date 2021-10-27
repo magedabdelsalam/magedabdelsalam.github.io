@@ -1,7 +1,5 @@
-// Packages
-import React from "react"
 // Styles
-import './index.css'
+import styles from '../styles/Footer.module.css'
 
 function Footer() {
     return(
@@ -9,7 +7,7 @@ function Footer() {
             <hr/>
             <h3>About Maged Abdelsalam</h3>
             <p>A product designer and developer based in the Seattle area.</p>
-            <ul className='socials'>
+            <ul className={styles.socials}>
                 <li><a href="mailto:hello@magedabdelsalam.com">Email</a></li>
                 <li><a href="https://github.com/magedabdelsalam">Github</a></li>
                 <li><a href="https://linkedin.com/in/magedabdelsalam">LinkedIn</a></li>
