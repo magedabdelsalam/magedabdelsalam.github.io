@@ -29,17 +29,12 @@ const ProductItem = ({product}) => {
     return (
         <motion.div variants={item} className={styles.product}>
             <div className={styles.photo}>
-                <img src={product.photo} alt={product.author}/>
+                <img src="../photo_1.png" alt="Maged Abdelsalam"/>
             </div>
-            <Link href={`/${product.category}`}>
-                <a className={styles.category}>
-                    {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
-                </a>
-            </Link>
-            <Link href={`/${product.category}/${product.title}`}>
-                <a className={styles.content}>
+            <Link href={product.url}>
+                <a className={styles.card}>
                     <h2 className={styles.title}>{product.title}</h2>
-                    <p className={styles.subtitle}>{product.subtitle}</p>
+                    <p className={styles.description}>{product.description}</p>
                     <img className={styles.thumbnail} src={product.thumbnail} alt={product.title}/>
                 </a>
             </Link>
