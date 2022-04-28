@@ -29,7 +29,7 @@ const ProductItem = ({product}) => {
     return (
         <motion.div variants={item} className={styles.product}>
             <div className={styles.photo}>
-                <img src="../photo_1.png" alt="Maged Abdelsalam"/>
+                <img src="/photo_1.png" alt="Maged Abdelsalam"/>
             </div>
             <Link href={product.url}>
                 <a className={styles.card}>
