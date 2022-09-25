@@ -1,10 +1,10 @@
 export const products = [
     {
         id: '1',
-        url: "https://www.magedabdelsalam.com/weather-dashboard",
+        url: "/weather-dashboard",
         title: "Weather Dashboard",
         keywords:"simple weather app",
-        description: "Simple weather app",
+        description: "Check the weather",
         thumbnail: "/weather_1.png",
     },
 ]

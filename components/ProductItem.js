@@ -1,6 +1,7 @@
 import styles from '../styles/Product.module.css'
 import { motion } from 'framer-motion';
 import Link from 'next/link'
+import Image from 'next/image'
 
 const ProductItem = ({product}) => {
     const item = {
@@ -29,13 +30,26 @@ const ProductItem = ({product}) => {
     return (
         <motion.div variants={item} className={styles.product}>
             <div className={styles.photo}>
-                <img src="/photo_1.png" alt="Maged Abdelsalam"/>
+                <Image
+                src="/photo_1.png"
+                alt="Maged Abdelsalam"
+                layout="responsive"
+                height={84}
+                width={60}
+                />
             </div>
             <Link href={product.url}>
                 <a className={styles.card}>
                     <h2 className={styles.title}>{product.title}</h2>
                     <p className={styles.description}>{product.description}</p>
-                    <img className={styles.thumbnail} src={product.thumbnail} alt={product.title}/>
+                    <Image
+                    className={styles.thumbnail}
+                    src={product.thumbnail}
+                    alt={product.title}
+                    layout="intrinsic"
+                    height={240}
+                    width={550}
+                    />
                 </a>
             </Link>
         </motion.div>
