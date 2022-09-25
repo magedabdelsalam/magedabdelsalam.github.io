@@ -28,17 +28,20 @@ const ProductList = ({products}) => {
         },
     }
     return (
-        <motion.section
-        variants={container}
-        initial="hide"
-        animate="show"
-        exit="exit"
-        className={styles.product}
-        >
-            {products.map((product) => (
-                <ProductItem key={product.id} product={product}/>
-            ))}
-        </motion.section>
+        <section>
+            <h2>Products</h2>
+            <motion.div
+            variants={container}
+            initial="hide"
+            animate="show"
+            exit="exit"
+            className={styles.product}
+            >
+                {products.map((product) => (
+                    <ProductItem key={product.id} product={product}/>
+                ))}
+            </motion.div>
+        </section>
     )
 }
 

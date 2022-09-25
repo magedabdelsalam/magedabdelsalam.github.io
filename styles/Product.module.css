@@ -25,10 +25,9 @@
 	margin: 0;
 }
 .description{
-	margin: 0;
+	margin: 0 0 4px;
 }
 .thumbnail{
-	margin-top: 6px;
 	border-radius: 3px;
 }
 
