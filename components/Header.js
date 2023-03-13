@@ -1,5 +1,7 @@
 // Packages
 import Link from 'next/link'
+import React from 'react';
+import { useEffect, useState } from 'react';
 // Styles
 import styles from '../styles/Header.module.css'
 

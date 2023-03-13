@@ -33,24 +33,20 @@ const ProductItem = ({product}) => {
                 <Image
                 src="/photo_1.png"
                 alt="Maged Abdelsalam"
-                layout="responsive"
                 height={84}
                 width={60}
                 />
             </div>
-            <Link href={product.url}>
-                <a className={styles.card}>
+            <Link href={product.url} className={styles.card}>
                     <h2 className={styles.title}>{product.title}</h2>
                     <p className={styles.description}>{product.description}</p>
                     <Image
                     className={styles.thumbnail}
                     src={product.thumbnail}
                     alt={product.title}
-                    layout="intrinsic"
                     height={240}
                     width={550}
                     />
-                </a>
             </Link>
         </motion.div>
     )
