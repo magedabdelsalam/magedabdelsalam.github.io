@@ -2,7 +2,7 @@ import styles from '../styles/Product.module.css'
 import { motion } from 'framer-motion';
 import ProductItem from './ProductItem'
 
-const ProductList = ({products}) => {
+export default function ProductList({products}){
     const container = {
         hide: { 
             opacity: 0,
@@ -27,8 +27,7 @@ const ProductList = ({products}) => {
             }
         },
     }
-    return (
-        <section>
+    return <section>
             <h2>Products</h2>
             <motion.div
             variants={container}
@@ -42,7 +41,4 @@ const ProductList = ({products}) => {
                 ))}
             </motion.div>
         </section>
-    )
 }
-
-export default ProductList

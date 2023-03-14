@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link'
 import Image from 'next/image'
 
-const ProductItem = ({product}) => {
+export default function ProductItem({product}){
     const item = {
         hide: { 
             opacity: 0,
@@ -29,27 +29,23 @@ const ProductItem = ({product}) => {
     }
     return (
         <motion.div variants={item} className={styles.product}>
-            <div className={styles.photo}>
-                <Image
-                src="/photo_1.png"
-                alt="Maged Abdelsalam"
-                height={84}
-                width={60}
-                />
-            </div>
-            <Link href={product.url} className={styles.card}>
-                    <h2 className={styles.title}>{product.title}</h2>
-                    <p className={styles.description}>{product.description}</p>
+            <div className={styles.card}>
+                <div className={styles.cardHeader}>
+                    <Link href={product.url}>
+                        <h2>{product.title}</h2>
+                    </Link>
+                    <p>{product.description}</p>
+                </div>
+                <div className={styles.cardBody}>
                     <Image
                     className={styles.thumbnail}
                     src={product.thumbnail}
                     alt={product.title}
-                    height={240}
-                    width={550}
+                    width={576}
+                    height={300}
                     />
-            </Link>
+                </div>
+            </div>
         </motion.div>
     )
 }
-
-export default ProductItem
