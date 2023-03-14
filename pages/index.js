@@ -1,12 +1,8 @@
 // Components
 import ProductList from '../components/ProductList'
 
-export default function home({products}) {
-    return(
-        <div>
-            <ProductList products={products}/>
-        </div>
-    )
+export default function Home({products}) {
+    return <ProductList products={products}/>
 }
 
 export const getStaticProps = async () => {

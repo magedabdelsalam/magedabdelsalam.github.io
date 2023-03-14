@@ -5,13 +5,11 @@ import Footer from '../components/Footer'
 // Styles
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return <div>
-      <Header />
       <Meta />
+      <Header />
         <Component {...pageProps} />
       <Footer />
     </div>
   }
-
-export default MyApp

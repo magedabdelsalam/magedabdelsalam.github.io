@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
-const Meta = ({title, keywords, description}) => {
+export default function Meta({title, keywords, description}){
     return(
         <Head>
             <meta name='viewport' content='width=device-width,initial-scale=1'/>
             <meta name='keywords' content={keywords}/>
             <meta name='description' content={description}/>
             <meta charSet='utf-8'/>
-            <link rel='icon' href='/photo_1.png'/>
+            <link rel='icon' href='/photo_1.jpg'/>
             <title>{title}</title>
         </Head>
     )
@@ -16,7 +16,5 @@ const Meta = ({title, keywords, description}) => {
 Meta.defaultProps = {
     title: 'Maged Abdelsalam',
     keywords: 'product designer, ux designer, seattle, cairo',
-    description: 'Product esigner and developer based in Seattle.'
+    description: 'Product Designer based in Seattle, WA'
 }
-
-export default Meta
