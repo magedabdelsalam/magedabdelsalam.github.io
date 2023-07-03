@@ -1,0 +1,15 @@
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.logo h1{
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.profile{ 
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+}

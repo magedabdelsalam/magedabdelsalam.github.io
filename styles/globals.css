@@ -1,79 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+	--surface-1: rgba(255,255,255,1);
+	--surface-2: rgba(248,249,250,1);
+	--edge-1:rgba(237,238,239,1);
+	--neutral-1: rgba(0,0,0,0.8);
+	--neutral-2: rgba(0,0,0,0.6);
+	--important-1: rgba(0,0,0,1);
+	--important-2: rgba(0,0,0,0.8);
+	--s-radius: 1rem;
+	--m-radius: 2rem;
+	--l-radius: 3rem
+}
+
+html{
+	--scroll-behavior: smooth!important;
+	scroll-behavior: smooth!important;
+}
 
 *{
 	box-sizing: border-box;
-	font-family: 'Space Mono', monospace;
+	font-family: 'Inter', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 body{
-	background:rgba(248,248,248,1);
-	color: rgba(60, 60, 60, 1);
-	padding: 24px 12px;
+	background: var(--surface-1);
+	color: var(--neutral-1);
+	padding: 2rem 0 6rem 0;
 }
-header,article,section,footer{
+header,section,footer{
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
-	max-width: 600px;
+	gap: 1rem;
+	max-width: 60rem;
 	margin: 0 auto;
-	padding: 24px 12px;
-	position: relative;
+	padding: 2rem 1rem;
+	width: 100%;
 }
 ::-webkit-scrollbar {
 	display: none;
 }
+
 h1{
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 2rem;
+	line-height: 3rem;
 }
 h2{
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 1.75rem;
+	line-height: 2.75rem;
 }
 h3{
-	font-size: 20px;
-	line-height: 32px;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
 }
 p{	
-	font-size: 20px;
-	line-height: 32px;
+	color: var(--neutral-2);
+	font-size: 1.25rem;
+	line-height: 2.25rem;
 }
 ul,ol{
-	font-size: 20px;
-	line-height: 32px;
+	
+	font-size: 1.25rem;
+	line-height: 2.25rem;
+	list-style-position: inside;
 	padding: 0;
 	margin: 0;
-	list-style-position: inside;
 }
 ul{
-	list-style-type: disclosure-closed;
+	list-style-type: none;
 }
 ol{
-	list-style-type: decimal-leading-zero;
-}
-li::marker{
-	font-weight: bold;
+	list-style-type: decimal;
 }
 a{
-	color:rgba(0,60,252,0.8);
+	color: var(--important-1);
 	text-decoration: none;
-	transition: 0.3s;
 }
 a:hover{
-	color:rgba(0,60,252,1);
-}
-a:visited{
-	color:rgba(0,60,252,.5);
+	color: var(--important-2);
 }
 span{
 	font-weight: 400;
-	padding: 6px;
-}
-video,img{
-	display: block;
-	width: 100%;
+	padding: 0.25rem;
 }
 input{
 	border: none;
+}
+video,img{
+	width: 100%;
+}
+hr{
+	border: 1px solid var(--edge-1);
 }
