@@ -1,0 +1,53 @@
+.cards{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.card{
+	background: var(--surface-2);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+	padding: 1.5rem;
+	border-radius: 1rem;
+}
+.noCard{
+	background: var(--surface-1);
+	padding: 0.5rem 0;
+	border-radius: 0;
+}
+.cardContent{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.miniCards{
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+.miniCard{
+	display: block;
+	width: 100%;
+	padding: 1rem 1.5rem;
+	border-radius: 0.5rem;
+	background: var(--surface-1);
+}
+.noMiniCard{
+	background: var(--surface-2);
+	border-radius: 0.5rem;
+}
+.miniCard li{
+	color: var(--neutral-2);
+}
+.thumbnail{
+	object-fit: contain;
+}
+
+@media (max-width: 720px) {
+	.miniCards {
+	  flex-direction: column;
+	}
+}

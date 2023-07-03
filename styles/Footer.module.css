@@ -1,7 +1,4 @@
 .socials{
     display: flex;
-    gap:24px;
-}
-.socials li{
-    list-style: none;
+    gap: 2rem;
 }
