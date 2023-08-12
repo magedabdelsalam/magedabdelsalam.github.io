@@ -1,53 +1,29 @@
 .cards{
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1rem;
+	
 }
 .card{
+	position: relative;
 	background: var(--surface-2);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	gap: 1rem;
-	padding: 1.5rem;
 	border-radius: 1rem;
+	overflow: hidden;
 }
-.noCard{
-	background: var(--surface-1);
-	padding: 0.5rem 0;
-	border-radius: 0;
+.card:hover .thumbnail{
+	transform: scale(1.01);
+	transform-origin: center;
 }
+
 .cardContent{
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
-}
-
-.miniCards{
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
-}
-.miniCard{
-	display: block;
-	width: 100%;
 	padding: 1rem 1.5rem;
-	border-radius: 0.5rem;
-	background: var(--surface-1);
-}
-.noMiniCard{
-	background: var(--surface-2);
-	border-radius: 0.5rem;
-}
-.miniCard li{
-	color: var(--neutral-2);
 }
 .thumbnail{
 	object-fit: contain;
-}
-
-@media (max-width: 720px) {
-	.miniCards {
-	  flex-direction: column;
-	}
+	transition: all .2s ease-in-out; 
 }

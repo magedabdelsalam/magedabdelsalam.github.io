@@ -4,13 +4,11 @@ import styles from '../styles/Footer.module.css'
 export default function Footer() {
     return(
         <footer>
-            <h3>About</h3>
-            <p>Product Designer & Developer based in Seattle, WA. <br/> Designing 0-1 products. Currently at <Link href='https://www.synapse-analytics.io'>Synapse Analytics</Link>.</p>
-            <ul className={styles.socials}>
-                <li><Link href="mailto:hello@magedabdelsalam.com">Email</Link></li>
-                <li><Link href="https://github.com/magedabdelsalam">Github</Link></li>
-                <li><Link href="https://linkedin.com/in/magedabdelsalam">LinkedIn</Link></li>
-            </ul>
+            <div>            
+                <h2>About</h2>
+                <p>My name is Maged [Ma-ged]. I am a product designer with 8+ years of experience working with startups to understand human frustration (Research) and imagine better solutions (Prototypes).</p>
+                <p>Avaliable for hire. Email me at <Link href="mailto:hello@magedabdelsalam.com"><a className={styles.highlight}>hello@magedabdelsalam.com</a></Link> </p>
+            </div>
         </footer>
     )
 }

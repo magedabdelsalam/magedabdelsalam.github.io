@@ -1,12 +1,11 @@
 import Products from '../components/Products'
 import Link from 'next/link'
 
-
 export default function Home({products}) {
     return <section>
-        <h3>Work</h3>
+        <h3>Featured Work</h3>
         <Products products={products}/>
-        <h3><Link scroll={false} href="#top">↑ Top</Link></h3>
+        <h4><Link scroll={false} href="#top">↑ Top</Link></h4>
     </section>
 }
 
