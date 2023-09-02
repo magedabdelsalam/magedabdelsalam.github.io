@@ -3,15 +3,12 @@
 
 :root{
 	--surface-1: rgba(255,255,255,1);
-	--surface-2: rgba(248,249,250,1);
-	--edge-1:rgba(237,238,239,1);
-	--neutral-1: rgba(0,0,0,0.8);
-	--neutral-2: rgba(0,0,0,0.6);
-	--important-1: rgba(0,0,0,1);
-	--important-2: rgba(0,0,0,0.8);
-	--s-radius: 1rem;
-	--m-radius: 2rem;
-	--l-radius: 3rem
+	--surface-2: rgba(247,248,249,1);
+	--edge:rgba(237,238,239,1);
+	--neutral: rgba(0,0,0,0.9);
+	--neutral-2: rgba(0,0,0,0.7);
+	--important: rgba(0,0,160,1);
+	--radius: 1rem;
 }
 
 html{
@@ -27,18 +24,18 @@ html{
 }
 body{
 	background: var(--surface-1);
-	color: var(--neutral-1);
+	color: var(--neutral);
 	padding: 2rem 0 6rem 0;
 }
 header,section,footer{
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
-	max-width: 60rem;
+	max-width: 52rem;
 	margin: 0 auto;
 	padding: 1.5rem 1rem;
 	width: 100%;
 	align-items: flex-start;
+	gap: 0.5rem;
 }
 ::-webkit-scrollbar {
 	display: none;
@@ -47,31 +44,28 @@ header,section,footer{
 h1{
 	font-size: 2rem;
 	line-height: 3rem;
-	font-weight: 700;
 }
 h2{
-	font-size: 1.75rem;
-	line-height: 3rem;
-	font-weight: 600;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
 }
 h3{
 	font-size: 1.5rem;
-	line-height: 2.75rem;
-	font-weight: 500;
+	line-height: 2.5rem;
 }
 h4{
 	font-size: 1.25rem;
 	line-height: 2.5rem;
-	font-weight: 400;
 }
 p{	
-	color: var(--neutral-2);
 	font-size: 1.25rem;
 	line-height: 2.5rem;
+	color:var(--neutral-2);
 }
 ul,ol{
 	font-size: 1.25rem;
 	line-height: 2.5rem;
+	color:var(--neutral-2);
 	list-style-position: inside;
 	padding: 0;
 	margin: 0;
@@ -84,24 +78,25 @@ ol{
 }
 ::marker	{
 	font-size: 1.25rem;
+	color: var(--neutral);
 }
 a{
-	color: var(--important-1);
+	color: var(--important);
 	text-decoration: none;
 }
 a:hover{
-	color: var(--important-2);
+	color: var(--neutral);
 }
 span{
 	text-transform: uppercase;
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: .75rem;
+	line-height: .75rem;
 	font-weight: 500;
 	letter-spacing: 0.05rem;
 	background: var(--surface-2);
-	border: 1px solid var(--edge-1);
-    padding: 4px;
-    border-radius: 4px;
+	border: 1px solid var(--edge);
+    padding: 4px 8px;
+    border-radius: var(--radius);
 }
 input{
 	border: none;
@@ -110,5 +105,17 @@ video,img{
 	width: 100%;
 }
 hr{
-	border: 1px solid var(--edge-1);
+	border: 1px solid var(--edge);
+}
+
+figure{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem 0;
+}
+figcaption{
+	font-size: 1rem;
+	line-height: 2.5rem;
 }

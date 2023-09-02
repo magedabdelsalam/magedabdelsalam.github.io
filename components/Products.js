@@ -1,10 +1,10 @@
 import styles from '../styles/Card.module.css'
 import Product from './Product'
 
-export default function Products({products}){
+export default function Products({data}){
     return <div className={styles.cards}>
-                {products.map((product) => (
-                    <Product key={product.id} product={product}/>
+                {data.map((data) => (
+                    <Product key={data.id} data={data}/>
                 ))}
         </div>
 }

@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import Card from '../components/Card'
 
-export default function Product({product}){
+export default function Product({data}){
     return (
-        <Link href={product.url}>
+        <Link href={data.url}>
             <a>
                 <Card 
-                subtitle={product.title} 
-                description={product.description}
-                img={product.thumbnail}
-                link={product.url}
+                subtitle={data.title} 
+                description={data.description}
+                img={data.thumbnail}
+                link={data.url}
                 />
             </a>
         </Link>

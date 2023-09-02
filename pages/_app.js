@@ -1,7 +1,5 @@
 // Components
-import Meta from '../components/Meta'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Layout from '../components/Layout'
 // Styles
 import '../styles/globals.css'
 import { useEffect } from 'react'
@@ -21,7 +19,7 @@ if (typeof window !== 'undefined') {
   })
 }
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps}) {
   const router = useRouter()
   useEffect(() => {
     // Track page views
@@ -32,12 +30,9 @@ export default function App({ Component, pageProps }) {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [])
-  return <div>
-      <Meta />
-      <Header />
-      <PostHogProvider client={posthog}>
-        <Component {...pageProps} />
-      </PostHogProvider>
-      <Footer />
-    </div>
+  return <Layout>
+        <PostHogProvider client={posthog}>
+          <Component {...pageProps} />
+        </PostHogProvider>
+      </Layout>
   }

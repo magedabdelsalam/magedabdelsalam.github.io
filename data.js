@@ -1,10 +1,10 @@
-export const products = [
+export const data = [
     {
         id: '1',
-        url: "/KonanAI",
+        url: "/konan",
         title: "Konan AI",
-        keywords:"Business focused MLOPs",
-        description: "Credit Risk Decisioning.",
-        thumbnail: "/konan.png",
+        keywords:"konan, mlops, case-study",
+        description: "A business focused MLOPs tool",
+        thumbnail: "/live.png",
     },
 ]

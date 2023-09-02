@@ -1,14 +1,12 @@
 import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 
-export default function Footer() {
+export default function Footer({data}) {
     return(
         <footer>
-            <div>            
-                <h2>About</h2>
-                <p>My name is Maged [Ma-ged]. I am a product designer with 8+ years of experience working with startups to understand human frustration (Research) and imagine better solutions (Prototypes).</p>
-                <p>Avaliable for hire. Email me at <Link href="mailto:hello@magedabdelsalam.com"><a className={styles.highlight}>hello@magedabdelsalam.com</a></Link> </p>
-            </div>
+            <h3>About</h3>
+            <p>Product designer with 8+ years of experience working with startups to understand human frustration (research) and imagine better solutions (prototypes).</p>
+            <p>Available for hire. Focused on software that helps people make better decisions at scale. Email me at <Link href="mailto:hello@magedabdelsalam.com"><a className={styles.highlight}>hello@magedabdelsalam.com</a></Link></p>
         </footer>
     )
 }
