@@ -12,7 +12,7 @@ export default function Konan() {
             <span>Role</span>
             <h2>Why I was Brought on</h2>
             <p>My role was to design a use-case Machine Learning Operations (MLOps) tool from scratch. But after working on this goal for a year, focusing entirely on technical users, we saw that Konan, at least the front-end part, was barely being used inside organizations.</p>
-            <p>Data scientists used our API to perform most of their goals and business users didn't understand our frontend from all the technical jargon aimed at data scientist.</p>
+            <p>Data scientists used our API to perform most of their goals and business users didn&apos;t understand our frontend from all the technical jargon aimed at data scientist.</p>
         </section>
         <section>
             <span>Pivot</span>
@@ -35,7 +35,7 @@ export default function Konan() {
         <section>
             <span>Insights</span>
             <h2>Shocking Truth: AI is Not Important (Right Now)</h2>
-            <p>Maybe, it's not so shocking after all. It makes sense that unless the core issues of their workflows are not being addressed, AI seemed far away. This forced us to focus more on quality of life features. Here are the issues we  identified;</p>
+            <p>Maybe, it&apos;s not so shocking after all. It makes sense that unless the core issues of their workflows are not being addressed, AI seemed far away. This forced us to focus more on quality of life features. Here are the issues we  identified;</p>
             <ol>
                 <li><strong>Data Visibility:</strong> Getting visibility using excel sheets, badly taken screenshots, badly designed presentations and  emails, were tedious and time consuming.</li>
                 <li><strong>Policy Testing:</strong> Testing policies was time-consuming and required a ton of manual copy-pasting through excel sheets</li>
@@ -47,7 +47,7 @@ export default function Konan() {
             <h2>Restructuring Konan</h2>
             <p>We had two structural problems;</p>
             <ol>
-                <li><strong>Workflow outgrew its size and didn't quite fit inside a project with a model.</strong> A user can create a project; only use it's MLOPS features, or only use its workflow features. This seemed confusing and restrictive for any future additions. We needed a way to separate different types of projects.</li>
+                <li><strong>Workflow outgrew its size and didn&apos;t quite fit inside a project with a model.</strong> A user can create a project; only use it&apos;s MLOPS features, or only use its workflow features. This seemed confusing and restrictive for any future additions. We needed a way to separate different types of projects.</li>
                 <li><strong>It was common that users created duplicate projects to start from a clean slate.</strong> This seemed like a hack. We needed a way to allow testing more freely without worrying about muddying the data</li>
             </ol>
         </section>
@@ -93,7 +93,7 @@ export default function Konan() {
         <section>
             <span>Challenges</span>
             <h2>Cultural Change</h2>
-            <p>This was one of the most challenging pivots I've experienced, but we did it. Changing our focus from MLOPS into Workflows with MLOPS on the side, really challenged the team, as most of us joined the company to work solely on an AI product. But as with any product, things change. This change was great for the company, and our customers.</p>
+            <p>This was one of the most challenging pivots I&apos;ve experienced, but we did it. Changing our focus from MLOPS into Workflows with MLOPS on the side, really challenged the team, as most of us joined the company to work solely on an AI product. But as with any product, things change. This change was great for the company, and our customers.</p>
             <h4><Link scroll={false} href="#top">↑ Top</Link></h4>
         </section>
     </article>

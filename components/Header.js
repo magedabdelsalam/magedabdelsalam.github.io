@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react';
 import styles from '../styles/Header.module.css'
 
-export default function Header({data}) {
+export default function Header() {
     return(
         <header id="top">
             <h1><Link href="/">Maged Abdelsalam</Link></h1>

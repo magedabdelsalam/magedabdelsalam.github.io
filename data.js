@@ -1,7 +1,7 @@
 export const data = [
     {
         id: '1',
-        url: "/konan",
+        url: "/Konan",
         title: "Konan AI",
         keywords:"konan, mlops, case-study",
         description: "A business focused MLOPs tool",

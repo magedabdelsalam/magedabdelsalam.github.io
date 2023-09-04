@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 
-export default function Footer({data}) {
+export default function Footer() {
     return(
         <footer>
             <h3>About</h3>

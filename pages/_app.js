@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import posthog from 'posthog-js'
-import { PostHogProvider} from 'posthog-js/react'
+import { PostHogProvider } from 'posthog-js/react'
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== 'undefined') {
@@ -15,12 +15,14 @@ if (typeof window !== 'undefined') {
     // Enable debug mode in development
     loaded: (posthog) => {
       if (process.env.NODE_ENV === 'development') posthog.debug()
-    }
+    },
+    capture_pageview: false // Disable automatic pageview capture, as we capture manually
   })
 }
 
-export default function App({ Component, pageProps}) {
+export default function App({ Component, pageProps }) {
   const router = useRouter()
+
   useEffect(() => {
     // Track page views
     const handleRouteChange = () => posthog?.capture('$pageview')
@@ -29,10 +31,13 @@ export default function App({ Component, pageProps}) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [])
-  return <Layout>
-        <PostHogProvider client={posthog}>
-          <Component {...pageProps} />
-        </PostHogProvider>
-      </Layout>
-  }
+  })
+
+  return (
+    <Layout>
+    <PostHogProvider client={posthog}>
+      <Component {...pageProps} />
+    </PostHogProvider>
+    </Layout>
+  )
+}
