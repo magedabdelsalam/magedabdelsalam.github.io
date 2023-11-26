@@ -7,5 +7,5 @@ export default function NotFound() {
             <h2>Page not found - 404</h2>
             <p>This page is either broken, or no longer exists.</p>
         </div>
-        </header>
+    </header>
 }

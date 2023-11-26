@@ -1,6 +1,6 @@
 import './globals.css'
-import Header from 'components/Header'
-import Footer from 'components/Footer'
+import Header from 'components/Header/Header'
+import Footer from 'components/Footer/Footer'
 import { PHProvider, PostHogPageview } from './providers'
 import { Suspense } from 'react'
  
