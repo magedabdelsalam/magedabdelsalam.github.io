@@ -103,7 +103,7 @@ export default function Konan() {
             <span>Challenges</span>
             <h2>Cultural Change</h2>
             <p>This was one of the most challenging pivots I&apos;ve experienced, but we did it. Changing our focus from MLOPS into Workflows with MLOPS on the side, really challenged the team, as most of us joined the company to work solely on an AI product. But as with any product, things change. This change was great for the company, and our customers.</p>
-            <h4><Link scroll={false} href="#top">↑ Top</Link></h4>
+            <h4><Link href="#top">↑ Top</Link></h4>
         </section>
     </article>
 }

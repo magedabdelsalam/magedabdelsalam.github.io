@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from '../styles/Card.module.css'
+import styles from 'styles/Card.module.css'
 
 export default function Card(card) {
     return(

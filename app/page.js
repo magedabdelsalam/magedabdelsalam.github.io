@@ -8,13 +8,14 @@ TODO:
 */
 
 async function getWork(){
-    const res = await fetch(`http://127.0.0.1:3000/api/data`,{ cache: 'force-cache' })
+    const res = await fetch(`http://127.0.0.1:3000/api/work`)
     const work = await res.json()
     return work
 }
 
-export default async function Home() {
+export default async function Page() {
     const work = await getWork()
+    console.log(work)
     return <section>
         <h3>Work</h3>
         <div className={styles.cards}>
