@@ -12,6 +12,12 @@
 	border-radius: var(--radius);
 	overflow: hidden;
 }
+
+.thumbnail{
+	object-fit: contain;
+	transition: all .2s ease-in-out; 
+	transform: scale(.84);
+}
 .card:hover .thumbnail{
 	transform: scale(.86);
 	transform-origin: center;
@@ -22,9 +28,4 @@
 	flex-direction: column;
 	padding: 1rem 1.5rem;
 	color: var(--neutral);
-}
-.thumbnail{
-	object-fit: contain;
-	transition: all .2s ease-in-out; 
-	transform: scale(.85);
 }

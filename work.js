@@ -1,4 +1,4 @@
-export const data = [
+export const work = [
     {
         id: '1',
         url: "/Konan",

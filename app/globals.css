@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Imbue:opsz,wght@10..100,300&display=swap');
 
 :root{
 	--surface-1: rgba(255,255,255,1);
 	--surface-2: rgba(247,248,249,1);
 	--edge:rgba(237,238,239,1);
-	--neutral: rgba(0,0,0,0.9);
-	--neutral-2: rgba(0,0,0,0.7);
-	--important: rgba(0,0,160,1);
-	--radius: 1rem;
+	--neutral: rgba(0,0,0,1);
+	--neutral-2: rgba(0,0,0,1);
+	--important: oklch(50% .2 200);
+	--radius: 0.25rem;
 }
 
 html{
 	--scroll-behavior: smooth!important;
 	scroll-behavior: smooth!important;
+	font-size: 14px;
 }
 
 *{
@@ -27,7 +27,7 @@ body{
 	color: var(--neutral);
 	padding: 2rem 0 6rem 0;
 }
-header,section,footer{
+section{
 	display: flex;
 	flex-direction: column;
 	max-width: 52rem;
@@ -35,36 +35,45 @@ header,section,footer{
 	padding: 1.5rem 1rem;
 	width: 100%;
 	align-items: flex-start;
-	gap: 0.5rem;
+	gap: 1rem;
 }
 ::-webkit-scrollbar {
 	display: none;
 }
 
+h1,h2,h3{
+	font-family: 'Imbue', sans-serif;
+}
 h1{
-	font-size: 2rem;
+	font-size: 4rem;
+	font-weight: 300;
 	line-height: 3rem;
 }
 h2{
-	font-size: 1.5rem;
+	font-size: 3rem;
+	font-weight: 300;
 	line-height: 2.5rem;
 }
 h3{
-	font-size: 1.5rem;
+	font-size: 2.5rem;
+	font-weight: 300;
 	line-height: 2.5rem;
 }
 h4{
 	font-size: 1.25rem;
+	font-weight: 300;
 	line-height: 2.5rem;
 }
 p{	
 	font-size: 1.25rem;
 	line-height: 2.5rem;
+	font-weight: 300;
 	color:var(--neutral-2);
 }
 ul,ol{
 	font-size: 1.25rem;
 	line-height: 2.5rem;
+	font-weight: 300;
 	color:var(--neutral-2);
 	list-style-position: inside;
 	padding: 0;
@@ -76,15 +85,21 @@ ul{
 ol{
 	list-style-type: decimal;
 }
+li{
+	margin:0;
+	padding:0;
+}
 ::marker	{
 	font-size: 1.25rem;
 	color: var(--neutral);
 }
 a{
 	color: var(--important);
+	font-weight: 400;
 	text-decoration: none;
 }
 a:hover{
+	transition: 300ms;
 	color: var(--neutral);
 }
 span{
@@ -92,10 +107,10 @@ span{
 	font-size: .75rem;
 	line-height: .75rem;
 	font-weight: 500;
-	letter-spacing: 0.05rem;
-	background: var(--surface-2);
+	letter-spacing: 0.10rem;
+	background: var(--edge);
 	border: 1px solid var(--edge);
-    padding: 4px 8px;
+    padding: 6px 8px 4px 8px;
     border-radius: var(--radius);
 }
 input{
@@ -103,9 +118,14 @@ input{
 }
 video,img{
 	width: 100%;
+	border-radius: 2px;
 }
 hr{
 	border: 1px solid var(--edge);
+}
+
+strong{
+	font-weight: 500;
 }
 
 figure{
@@ -117,5 +137,6 @@ figure{
 }
 figcaption{
 	font-size: 1rem;
+	font-weight: 300;
 	line-height: 2.5rem;
 }

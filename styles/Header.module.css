@@ -3,3 +3,7 @@
     display: flex;
     gap: 1rem;
 }
+.logo{
+    font-family: 'Imbue', serif;
+    color: var(--neutral);
+}

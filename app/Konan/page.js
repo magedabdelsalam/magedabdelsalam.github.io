@@ -1,13 +1,22 @@
 import Link from 'next/link'
 
+/* 
+TODO: 
+1. Add team details
+2. Update all images
+3. Add process images
+*/
+
 export default function Konan() {
     return <article>
-        <header>
-            <h4><Link href="/"><a>{`<-`} Back</a></Link></h4>
+        <section>
+            <h4><Link href="/">{`<-`} Back</Link></h4>
             <img src="/projects.png" alt="Projects"/>
+        </section>
+        <section>
             <h1>Konan AI</h1>
-            <p>A business focused MLOPs tool</p>
-        </header>
+            <p>A business focused MLOPs tool</p> 
+            </section>
         <section>
             <span>Role</span>
             <h2>Why I was Brought on</h2>

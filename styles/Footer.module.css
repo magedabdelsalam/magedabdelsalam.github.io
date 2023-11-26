@@ -1,0 +1,8 @@
+.split{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.half{
+    width: 50%;
+}
