@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 const projects = [
   {
       id: '1',
-      url: "/Konan",
+      url: "/konan",
       title: "Konan AI",
       keywords:"konan, mlops, case-study",
       description: "A business focused MLOPs tool",
