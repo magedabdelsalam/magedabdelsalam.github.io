@@ -1,0 +1,16 @@
+.cover{
+    width:150%;
+    margin-left:-25%;
+}
+
+.context{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--color-980);
+    padding-bottom: 1rem;
+}
+.context p{
+    color: var(--color-200);
+}

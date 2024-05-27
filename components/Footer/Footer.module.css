@@ -1,8 +1,8 @@
-.split{
+.poster{
+    list-style: none;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-}
-.half{
-    width: 50%;
+    justify-content: space-between;
+    gap: 1rem;
 }

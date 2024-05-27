@@ -1,24 +1,29 @@
-import Link from 'next/link'
+'use client'
 
-/* 
-TODO: 
-1. Add team details
-2. Update all images
-3. Add process images
-*/
+import Link from 'next/link'
+import styles from 'app/konan/Page.module.css'
+import Annotation from 'components/Annotation/Annotation'
 
 export default function Konan() {
     return <article>
-        <section>
+        <header>
             <h4><Link href="/">{`<-`} Back</Link></h4>
+            <figure>
             <img src="/projects.png" alt="Projects"/>
-        </section>
+            </figure>
+            <div className={styles.context}>
+                <span>Synapse Analytics</span>
+                <span>UX Lead</span>
+                <span>2 DSGN 4 ENG 1 PM</span>
+                <span>6 Months</span>
+            </div>
+        </header>
         <section>
             <h1>Konan AI</h1>
-            <p>A business focused MLOPs tool</p> 
-            </section>
+            <p>A business focused MLOPs tool</p>
+        </section>
         <section>
-            <span>Role</span>
+            <span>Problem</span>
             <h2>Why I was Brought on</h2>
             <p>My role was to design a use-case Machine Learning Operations (MLOps) tool from scratch. But after working on this goal for a year, focusing entirely on technical users, we saw that Konan, at least the front-end part, was barely being used inside organizations.</p>
             <p>Data scientists used our API to perform most of their goals and business users didn&apos;t understand our frontend from all the technical jargon aimed at data scientist.</p>
@@ -96,14 +101,14 @@ export default function Konan() {
             </figure>
             <figure>
                 <img src="/live.png" alt="Live"/>
+                <Annotation>Hello world</Annotation>
                 <figcaption>Viewing live data coming in</figcaption>
             </figure>
         </section>
         <section>
-            <span>Challenges</span>
+            <span>Impact</span>
             <h2>Cultural Change</h2>
             <p>This was one of the most challenging pivots I&apos;ve experienced, but we did it. Changing our focus from MLOPS into Workflows with MLOPS on the side, really challenged the team, as most of us joined the company to work solely on an AI product. But as with any product, things change. This change was great for the company, and our customers.</p>
-            <h4><Link href="#top">↑ Top</Link></h4>
         </section>
     </article>
 }
