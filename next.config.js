@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-  }
+  experimental: {
+    appDir: true,
+  },
+  images: {
+    domains: ['localhost'], // Add any external domains you're loading images from
+  },
+}
+
 module.exports = nextConfig

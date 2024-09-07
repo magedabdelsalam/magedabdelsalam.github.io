@@ -20,7 +20,7 @@ const caveat = Caveat({
  
 export const metadata = {
   title: 'Maged Abdelsalam - Product Designer',
-  description: 'Product designer with 8+ years of experience working with startups to understand human frustration and imagine better solutions.',
+  description: 'Product designer with 9+ years of experience working with startups to understand human frustration and imagine better solutions.',
   keywords: 'maged abdelsalam, product designer',
 }
 

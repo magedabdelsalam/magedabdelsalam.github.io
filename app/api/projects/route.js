@@ -4,7 +4,7 @@ const projects = [
   {
       id: 1,
       url: "/konan",
-      title: "Konan AI: Case Study",
+      title: "Konan AI",
       keywords:"konan, mlops, case study",
       description: "Automated & accurate decision making",
       thumbnail: "/live.png",

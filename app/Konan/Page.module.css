@@ -1,16 +1,27 @@
 .cover{
-    width:150%;
-    margin-left:-25%;
+    position: relative;
+    align-self: center;
+    width: 150% !important;
 }
 
 .context{
     display: flex;
     width: 100%;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 2px solid var(--color-980);
-    padding-bottom: 1rem;
+}
+.context div:first-of-type{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .context p{
     color: var(--color-200);
+}
+
+@media (max-width: 1400px) {
+	.cover{
+		width: 100% !important;
+	}
 }

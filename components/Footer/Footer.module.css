@@ -6,3 +6,29 @@
     justify-content: space-between;
     gap: 1rem;
 }
+.cta{
+    background:var(--color-500);
+    color:var(--color-1000);
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.5rem ;
+}
+.cta:hover{
+    background:var(--color-200);
+    color:var(--color-1000);
+}
+.attn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    background:var(--color-200);
+    color: var(--color-1000);
+    padding: 4rem;
+    border-radius: 1rem;
+}
+@media (max-width: 840px) {
+    .poster{
+        flex-direction: column;
+    }
+}

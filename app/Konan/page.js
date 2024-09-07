@@ -1,27 +1,30 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from 'app/konan/Page.module.css'
 import Annotation from 'components/Annotation/Annotation'
 
 export default function Konan() {
     return <article>
         <header>
-            <h4><Link href="/">{`<-`} Back</Link></h4>
-            <figure>
-            <img src="/projects.png" alt="Projects"/>
-            </figure>
-            <div className={styles.context}>
-                <span>Synapse Analytics</span>
-                <span>UX Lead</span>
-                <span>2 DSGN 4 ENG 1 PM</span>
-                <span>6 Months</span>
-            </div>
+            <section>
+                <div className={styles.context}>
+                    <h4><Link href="/">{`<-`} Back</Link></h4>
+                    <div>
+                        <span>Synapse Analytics</span>
+                        <span>UX Lead</span>
+                        <span>2 DSGN 4 ENG 1 PM</span>
+                        <span>6 Months</span>
+                    </div>
+                </div>
+                <figure>
+                <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
+                </figure>
+                <h1>Konan AI</h1>
+                <p>A business focused MLOPs tool</p>
+            </section>
         </header>
-        <section>
-            <h1>Konan AI</h1>
-            <p>A business focused MLOPs tool</p>
-        </section>
         <section>
             <span>Problem</span>
             <h2>Why I was Brought on</h2>
@@ -76,31 +79,31 @@ export default function Konan() {
                 <li>Common Templates (Future)</li>
             </ul>
             <figure>
-                <img src="/usecases.png" alt="Usecases"/>
+                <Image fill={true} src="/usecases.png" alt="Usecases"/>
                 <figcaption>Choosing between use-cases</figcaption>
             </figure>
             <figure>
-                <img src="/model.png" alt="Model"/>
+                <Image fill={true} src="/model.png" alt="Model"/>
                 <figcaption>Viewing at model output</figcaption>
             </figure>
             <figure>
-                <img src="/retraining.png" alt="Retraining"/>
+                <Image fill={true} src="/retraining.png" alt="Retraining"/>
                 <figcaption>Viewing retraining model report</figcaption>
             </figure>
             <figure>
-                <img src="/workflow.png" alt="Workflow"/>
+                <Image fill={true} src="/workflow.png" alt="Workflow"/>
                 <figcaption>Creating a workflow</figcaption>
             </figure>
             <figure>
-                <img src="/blocks.png" alt="Blocks"/>
+                <Image fill={true} src="/blocks.png" alt="Blocks"/>
                 <figcaption>Choosing between different blocks</figcaption>
             </figure>
             <figure>
-                <img src="/simulation.png" alt="Simulation"/>
+                <Image fill={true} src="/simulation.png" alt="Simulation"/>
                 <figcaption>Testing different scenarios and viewing reports</figcaption>
             </figure>
             <figure>
-                <img src="/live.png" alt="Live"/>
+                <Image fill={true} src="/live.png" alt="Live"/>
                 <Annotation>Hello world</Annotation>
                 <figcaption>Viewing live data coming in</figcaption>
             </figure>

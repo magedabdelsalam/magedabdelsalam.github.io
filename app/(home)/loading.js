@@ -57,5 +57,31 @@ export default function Loading() {
                 </div>
             </div>
         </section>
+        <section>
+            <Skeleton h2/>
+            <div className={styles.minicardsalt}>
+                <div className={miniCardStyles.card}>
+                    <Skeleton miniImg/>
+                    <div className={miniCardStyles.content}>
+                        <Skeleton h4/>
+                        <Skeleton p/>
+                    </div>
+                </div>
+                <div className={miniCardStyles.card}>
+                    <Skeleton miniImg/>
+                    <div className={miniCardStyles.content}>
+                        <Skeleton h4/>
+                        <Skeleton p/>
+                    </div>
+                </div>
+                <div className={miniCardStyles.card}>
+                    <Skeleton miniImg/>
+                    <div className={miniCardStyles.content}>
+                        <Skeleton h4/>
+                        <Skeleton p/>
+                    </div>
+                </div>
+            </div>
+        </section>
     </article>
   }

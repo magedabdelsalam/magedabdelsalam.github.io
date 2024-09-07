@@ -1,16 +1,20 @@
+'use client'
 // Packages
 import Link from 'next/link'
-import React from 'react';
 import styles from 'components/Header/Header.module.css'
+import Image from 'next/image'
 
 export default function Header() {
     return(
         <header id="top">
-            <Link href="/" className={styles.logo}><h1>MAGED ABDELSALAM</h1></Link>
-            <ul className={styles.poster}>
-                <li><a target="_blank" rel="noreferrer" href="https://linkedin.com/in/magedabdelsalam">Lead UX designer</a> based in Seattle, WA</li>
-                <li>Available for a FT position <Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Hire me</Link></li>
-            </ul>
+            <section>
+                <Link href="/"><h1 className={styles.logo}>Make work <br/><div className={styles.logoSub}>software</div> fun</h1></Link>
+                <ul className={styles.poster}>
+                    <li><Image src="/maged.jpg" alt="Maged Abdelsalam" width={48} height={48} className={styles.avatar}/>Maged<br/>Abdelsalam</li>
+                    <li><a target="_blank" rel="noreferrer" href="https://linkedin.com/in/magedabdelsalam">Lead UX designer</a><br/> based in Seattle, WA</li>
+                    <li><Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Send Email</Link></li>
+                </ul>
+            </section>
         </header>
     )
 }
