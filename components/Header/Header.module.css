@@ -7,9 +7,12 @@
     justify-content: space-between;
     gap: 1rem;
 }
+.poster li{
+    line-height: 1.75rem;
+}
 .poster li:first-of-type{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
@@ -26,12 +29,30 @@
     text-wrap: nowrap;
     color: var(--color-100);
 }
-.logo:hover {
-    color: var(--color-500);
+.logoSub {
+    position: relative;
+    display: inline-block;
+    color: var(--color-800);
+    transition: all 0.3s ease;
 }
-.logoSub{
-    display: inline;
-    color: var(--color-900);
+
+.logoSub:hover {
+    color: transparent;
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 0, 0, 1),
+        rgba(255, 165, 0, 1),
+        rgba(255, 255, 0, 1),
+        rgba(0, 255, 0, 1),
+        rgba(0, 255, 255, 1),
+        rgba(0, 0, 255, 1),
+        rgba(255, 0, 255, 1),
+        rgba(255, 0, 0, 1)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    animation: rainbow-text 5s linear infinite;
 }
 
 .cta{
@@ -44,8 +65,12 @@
     background:var(--color-200);
     color:var(--color-1000);
 }
-@media (max-width: 600px) {
-    .poster li:nth-of-type(2){
-        display: none;
+
+@keyframes rainbow-text {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
     }
 }

@@ -4,7 +4,6 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	gap:0.5rem;
 	border-radius: var(--base);
 	overflow: hidden;
 }
@@ -17,13 +16,15 @@
 .content{
 	display: flex;
 	flex-direction: column;
-	gap:0.25rem;
 	padding: 0.5rem 1.5rem 1.5rem;
 }
 .content p{
 	font-size: 1rem;
 	line-height: 1.5rem;
 	color: var(--color-100);
+}
+.content p:last-child{
+	margin-bottom: 0;
 }
 
 @media (max-width: 1400px) {

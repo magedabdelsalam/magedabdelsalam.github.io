@@ -20,7 +20,8 @@ export default async function Home() {
     const experienceData = await getExperiences()
     const workshopData = await getWorkshops()
     const [projects, experiences, workshops] = await Promise.all([projectData, experienceData, workshopData])
-    return <article>
+    return (
+    <article>
         <section>
             <h2>9+ years designing enterprise B2B software.</h2>
             <div className={styles.minicards}>
@@ -46,5 +47,6 @@ export default async function Home() {
             </div>
         </section>
     </article>
+    )
 }
 

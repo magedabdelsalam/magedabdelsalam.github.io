@@ -22,6 +22,8 @@
 	display: flex;
 	flex-direction: column;
 	padding: 1.5rem;
-	gap: 0.25rem;
 	color: var(--color-200);
+}
+.content p:last-child{
+	margin-bottom: 0;
 }
