@@ -23,6 +23,15 @@
 	padding: 1rem 0;
 }
 
+.matchList{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: var(--color-980);
+	border-radius: var(--base);
+    padding: 1rem;
+}
+
 @media (max-width: 1400px) {
 	.minicards,.minicardsalt{
 		width: 100%;

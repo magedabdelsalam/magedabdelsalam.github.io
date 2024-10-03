@@ -9,9 +9,9 @@ export default function manifest() {
       theme_color: '#fff',
       icons: [
         {
-          src: '/favicon.ico',
+          src: '/favicon.png',
           sizes: 'any',
-          type: 'image/x-icon',
+          type: 'image/png',
         },
       ],
     }

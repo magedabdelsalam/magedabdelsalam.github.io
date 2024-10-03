@@ -8,14 +8,15 @@
 	overflow: hidden;
 }
 
-.img{
-	object-fit: contain;
-	transition: all .2s ease-in-out; 
-	transform: scale(.78);
+.img {
+    object-fit: contain;
+    transition: all 0.3s ease-in-out; 
+    transform: scale(0.89);
 }
-.card:hover .img{
-	transform: scale(.80);
-	transform-origin: center;
+
+.card:hover .img {
+    transform: scale(0.90) rotate(-0.5deg);
+    transform-origin: center;
 }
 
 .content{
