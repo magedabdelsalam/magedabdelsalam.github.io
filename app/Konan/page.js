@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from 'app/konan/Page.module.css'
+import styles from 'app/Konan/Page.module.css'
 import Annotation from 'components/Annotation/Annotation'
 
 export default function Konan() {
