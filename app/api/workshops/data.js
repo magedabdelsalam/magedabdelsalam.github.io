@@ -1,6 +1,4 @@
-import { NextResponse } from "next/server";
-
-const workshops = [
+export default [
     {
         id: 1,
         title: "Ex3 UX Bootcamp",
@@ -20,8 +18,3 @@ const workshops = [
         img: "/ashoka.png",
     },
 ]
-
-export async function GET(request) {
-  return NextResponse.json(workshops, { status: 200 });
-
-}

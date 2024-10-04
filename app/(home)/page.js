@@ -2,24 +2,15 @@ import styles from 'app/(home)/Page.module.css'
 import Card from 'components/Card/Card'
 import MiniCard from 'components/MiniCard/MiniCard'
 
-async function getProjects(){
-    const res = await fetch(`${process.env.BASE_URL}/api/projects/`)  
-    return res.json()
-}
-async function getExperiences(){
-    const res = await fetch(`${process.env.BASE_URL}/api/experiences/`)  
-    return res.json()
-}
-async function getWorkshops(){
-    const res = await fetch(`${process.env.BASE_URL}/api/workshops/`)  
-    return res.json()
-}
+import projectsData from '../api/projects/data'
+import experiencesData from '../api/experiences/data'
+import workshopsData from '../api/workshops/data'
 
-export default async function Home() {
-    const projectData = await getProjects()
-    const experienceData = await getExperiences()
-    const workshopData = await getWorkshops()
-    const [projects, experiences, workshops] = await Promise.all([projectData, experienceData, workshopData])
+export default function Home() {
+    const projects = projectsData
+    const experiences = experiencesData
+    const workshops = workshopsData
+
     return (
     <article>
         <section>

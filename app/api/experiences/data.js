@@ -1,6 +1,4 @@
-import { NextResponse } from "next/server";
-
-const experiences = [
+export default [
     {
         id: 1,
         title: "UX Lead",
@@ -32,8 +30,3 @@ const experiences = [
         img: "/northrop.png",
     },
 ]
-
-export async function GET(request) {
-  return NextResponse.json(experiences, { status: 200 });
-
-}
