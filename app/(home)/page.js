@@ -3,16 +3,16 @@ import Card from 'components/Card/Card'
 import MiniCard from 'components/MiniCard/MiniCard'
 
 async function getProjects(){
-    const res = await fetch(`http://localhost:3000/api/projects/`)  
-    return  res.json()
+    const res = await fetch(`${process.env.BASE_URL}/api/projects/`)  
+    return res.json()
 }
 async function getExperiences(){
-    const res = await fetch(`http://localhost:3000/api/experiences/`)  
-    return  res.json()
+    const res = await fetch(`${process.env.BASE_URL}/api/experiences/`)  
+    return res.json()
 }
 async function getWorkshops(){
-    const res = await fetch(`http://localhost:3000/api/workshops/`)  
-    return  res.json()
+    const res = await fetch(`${process.env.BASE_URL}/api/workshops/`)  
+    return res.json()
 }
 
 export default async function Home() {
