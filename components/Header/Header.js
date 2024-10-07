@@ -19,7 +19,7 @@ export default function Header() {
                             </a>
                         </div>
                     </li>
-                    <li><Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Send Email</Link></li>
+                    <li><Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Email</Link></li>
                 </ul>
             </section>
         </header>
