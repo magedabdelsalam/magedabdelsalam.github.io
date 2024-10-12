@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         title: "Ex3 UX Bootcamp",
-        description: "Mentor teams and judging panel",
+        description: "Mentorship and judging panel",
         img: "/eslsca.png",
     },
     {

@@ -2,31 +2,31 @@ export default [
     {
         id: 1,
         title: "UX Lead",
-        description: "SME & Consumer Lending App",
+        description: "SME & Consumer Lending",
         img: "/synapse.png",
     },
     {
         id: 2,
         title: "Sr. UX Designer",
-        description: "Barber Discovery & Booking App",
+        description: "Barber Discovery & Booking",
         img: "/heircut.png",
     },
     {
         id: 3,
         title: "Founding UX Designer",
-        description: "Medical Decision Making App",
+        description: "Medical Decision Making",
         img: "/choicemap.png",
     },
     {
         id: 4,
         title: "Web Designer",
-        description: "Educate & Combat HIV Website ",
+        description: "Educate & Combat HIV",
         img: "/ummc.svg",
     },
     {
         id: 5,
         title: "Interaction Designer",
-        description: "Metadata Repository App",
+        description: "Metadata Repository",
         img: "/northrop.png",
     },
 ]

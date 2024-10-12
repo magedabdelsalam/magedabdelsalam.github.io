@@ -9,8 +9,8 @@ export default function Header() {
         <header id="top">
             <section>
                 <Link href="/"><h1 className={styles.logo}>Make work <br/><div className={styles.logoSub}>software</div> fun</h1></Link>
-                <ul className={styles.poster}>
-                    <li>
+                <div className={styles.poster}>
+                    <div>
                         <Image src="/maged.jpg" alt="Maged Abdelsalam" width={48} height={48} className={styles.avatar}/>
                         <div>
                             <span>Maged Abdelsalam</span>
@@ -18,9 +18,9 @@ export default function Header() {
                             Lead UX designer
                             </a>
                         </div>
-                    </li>
-                    <li><Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Email</Link></li>
-                </ul>
+                    </div>
+                    <Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Email</Link>
+                </div>
             </section>
         </header>
     )
