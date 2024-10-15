@@ -12,7 +12,7 @@ export default function Footer() {
             </section>
             <section className={styles.poster}>
                 <h4><Link href="#top">↑ Top</Link></h4>
-                <p>©DAGADEGO</p>
+                <p>© Maged Abdelsalam</p>
             </section>
         </footer>
     )

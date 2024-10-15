@@ -85,11 +85,26 @@ export default function Home() {
             <section>
                 <h2>5 things to know about me</h2>
                 <ol className={styles.matchList}>
-                    <li><strong>Teamwork as the foundation for anything successful.</strong> <br/>Nothing brings me joy like a well synced team. This is the one thing I look for in any team I work, or play (basketball) with.</li>
-                    <li><strong>Background in Visual Arts & Design. </strong> <br/>Became a jack of all trades; Drawing, Painting, Illustration, Sculpting, Photography, Stop-motion animation, etc. Found my calling in software design.</li>
-                    <li><strong>Lead design workshops since college.</strong> <br/>I love showing people the invisiable impact design has on their lives (both good and bad) and how they can use it to create change.</li>
-                    <li><strong>Started with social impact focused work with non-profits.</strong> <br/>Got stuck with the reality that most non-profits are politically motivated to maintain the status quo. I really hope this changes.</li>
-                    <li><strong>Found startups as the best way to create impact.</strong> <br/>Despite the low odds of success (I've experienced two failed startups myself), being part of a startup is still one of the best ways to have impact on millions of people.</li>
+                    <li>
+                        <strong>Teamwork as the foundation for anything successful.</strong>
+                        <p>Nothing brings me joy like a well synced team. This is the one thing I look for in any team I work, or play (basketball) with.</p>
+                    </li>
+                    <li>
+                        <strong>Background in Visual Arts & Design. </strong>
+                        <p>Became a jack of all trades; Drawing, Painting, Illustration, Sculpting, Photography, Stop-motion animation, etc. Found my calling in software design.</p>
+                    </li>
+                    <li>
+                        <strong>Lead design workshops since college.</strong>
+                        <p>I love showing people the invisible impact design has on their lives (both good and bad) and how they can use it to create change.</p>
+                    </li>
+                    <li>
+                        <strong>Started with social impact focused work with non-profits.</strong>
+                        <p>Got stuck with the reality that most non-profits are politically motivated to maintain the status quo. I really hope this changes.</p>
+                    </li>
+                    <li>
+                        <strong>Found startups as the best way to create impact.</strong>
+                        <p>Despite the low odds of success (I've experienced two failed startups myself), being part of a startup is still one of the best ways to have impact on millions of people.</p>
+                    </li>
                 </ol>
             </section>
         </article>

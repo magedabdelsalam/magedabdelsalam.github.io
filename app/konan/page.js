@@ -22,7 +22,7 @@ export default function Konan() {
                 <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
                 </figure>
                 <h1>Konan AI</h1>
-                <p>A business focused MLOPs tool</p>
+                <p>AI credit decision-making for risk officers</p>
             </section>
         </header>
         <section>
@@ -54,9 +54,9 @@ export default function Konan() {
             <h2>Shocking Truth: AI is Not Important (Right Now)</h2>
             <p>Maybe, it&apos;s not so shocking after all. It makes sense that unless the core issues of their workflows are not being addressed, AI seemed far away. This forced us to focus more on quality of life features. Here are the issues we  identified;</p>
             <ol>
-                <li><strong>Data Visibility:</strong><br/>Getting visibility using excel sheets, badly taken screenshots, badly designed presentations and  emails, were tedious and time consuming.</li>
-                <li><strong>Policy Testing:</strong><br/> Testing policies was time-consuming and required a ton of manual copy-pasting through excel sheets</li>
-                <li><strong>Automate Policy Decisions:</strong><br/> AI is cool, but our customers are focused more on automating policy decisions using a combination of their own policy rules and regulation</li>
+                <li>Data Visibility:<p>Getting visibility using excel sheets, badly taken screenshots, badly designed presentations and  emails, were tedious and time consuming.</p></li>
+                <li>Policy Testing:<p>Testing policies was time-consuming and required a ton of manual copy-pasting through excel sheets</p></li>
+                <li>Automate Policy Decisions:<p>AI is cool, but our customers are focused more on automating policy decisions using a combination of their own policy rules and regulation</p></li>
             </ol>
         </section>
         <section>
@@ -64,8 +64,8 @@ export default function Konan() {
             <h2>Restructuring Konan</h2>
             <p>We had two structural problems;</p>
             <ol>
-                <li><strong>Workflow outgrew its size and didn&apos;t quite fit inside a project with a model.</strong><br/>A user can create a project; only use it&apos;s MLOPS features, or only use its workflow features. This seemed confusing and restrictive for any future additions. We needed a way to separate different types of projects.</li>
-                <li><strong>It was common that users created duplicate projects to start from a clean slate.</strong><br/>This seemed like a hack. We needed a way to allow testing more freely without worrying about muddying the data</li>
+                <li>Workflow outgrew its size and didn&apos;t quite fit inside a project with a model.<p>A user can create a project; only use it&apos;s MLOPS features, or only use its workflow features. This seemed confusing and restrictive for any future additions. We needed a way to separate different types of projects.</p></li>
+                <li>It was common that users created duplicate projects to start from a clean slate.<p>This seemed like a hack. We needed a way to allow testing more freely without worrying about muddying the data</p></li>
             </ol>
         </section>
         <section>
@@ -73,10 +73,10 @@ export default function Konan() {
             <h2>Better Decisions Through Simplicity</h2>
             <p>With all the change of focus and additional knowledge we gained; we wanted to simplify and design the most essential Konan experience that aligns with our vision. Here are the main ideas that stuck out;</p>
             <ul>
-                <li><strong>Separate domains:</strong><br/>Models & Workflows</li>
-                <li><strong>Separate stages:</strong><br/>Test, Share, Deploy, Monitor, & Repeat</li>
-                <li><strong>Models Marketplace:</strong><br/>(Future)</li>
-                <li><strong>Common Templates:</strong><br/>(Future)</li>
+                <li>Separate domains:<p>Models & Workflows</p></li>
+                <li>Separate stages:<p>Test, Share, Deploy, Monitor, & Repeat</p></li>
+                <li>Models Marketplace:<p>(Future)</p></li>
+                <li>Common Templates:<p>(Future)</p></li>
             </ul>
             <figure>
                 <Image fill={true} src="/usecases.png" alt="Usecases"/>

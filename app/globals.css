@@ -5,8 +5,8 @@
 	--color-900: oklch(90% 0 200);
 	--color-800: oklch(80% 0 200);
 	--color-700: oklch(60% 2 78 );
-	--color-500: oklch(50% 0.5 200);
-	--color-200: oklch(20% 0 200);
+	--color-505: oklch(50% 0.5 200);
+	--color-500: oklch(50% 0 200);
 	--color-100: oklch(10% 0 200);
 	--color-50: oklch(5% 0 200);
 	--color-00: oklch(0% 0 200);
@@ -45,7 +45,7 @@ article{
 section{
 	display: flex;
 	flex-direction: column;
-	max-width: 72rem;
+	max-width: 64rem;
 	margin: 0 auto;
 	padding: 2rem;
 	width: 100%;
@@ -58,28 +58,29 @@ section{
 
 h1{
 	font-size: 2rem;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 2.5rem;
 }
 h2{
 	font-size: 1.75rem;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 2.5rem;
 }
 h3{
 	font-size: 1.5rem;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 2.5rem;
 }
 h4{
 	font-size: 1.25rem;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 2rem;
 }
 p{	
 	font-size: 1.25rem;
 	line-height: 2.5rem;
 	font-weight: 400;
+	color: var(--color-500);
 }
 ul,ol{
 	display: flex;
@@ -98,6 +99,7 @@ ol{
 	list-style-type: decimal;
 }
 li{
+	font-weight: 500;
 	margin:0;
 	padding:0;
 }
@@ -106,19 +108,18 @@ li{
 	color: var(--color-00);
 }
 a{
-	color: var(--color-500);
+	color: var(--color-505);
 	font-size: 1.25rem;
-	font-weight: 700;
+	font-weight: 600;
 	text-decoration: none;
 }
 a:hover{
-	transition: 400ms;
-	color: var(--color-200);
+	transition: 300ms;
+	color: var(--color-100);
 }
 span{
 	display: block;
 	font-size: 1.25rem;
-	color: var(--color-200);
 }
 input{
 	border: none;
@@ -132,10 +133,6 @@ hr{
 	border: 1px solid var(--color-800);
 }
 
-strong{
-	font-weight: 700;
-}
-
 figure{
 	position: relative;
 	display: flex;
@@ -147,8 +144,9 @@ figure{
 }
 figcaption{
 	font-size: 1rem;
-	font-weight: 400;
 	line-height: 2.5rem;
+	font-weight: 400;
+	color: var(--color-500);
 }
 
 img {

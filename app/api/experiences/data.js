@@ -8,7 +8,7 @@ export default [
     {
         id: 2,
         title: "Sr. UX Designer",
-        description: "Barber Discovery & Booking",
+        description: "Barber Discovery",
         img: "/heircut.png",
     },
     {

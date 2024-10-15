@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         title: "Ex3 UX Bootcamp",
-        description: "Mentorship and judging panel",
+        description: "Intro to UX Design",
         img: "/eslsca.png",
     },
     {
@@ -14,7 +14,7 @@ export default [
     {
         id: 3,
         title: "Design Thinking",
-        description: "Collabrative problem solving",
+        description: "Team problem solving",
         img: "/ashoka.png",
     },
 ]
