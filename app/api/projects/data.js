@@ -4,7 +4,7 @@ export default [
     url: "/konan",
     title: "Konan AI",
     keywords:"konan, mlops, case study",
-    description: "Automated & accurate decision making",
+    description: "AI credit decisioning for risk officers",
     thumbnail: "/live.png",
   },
 ]
