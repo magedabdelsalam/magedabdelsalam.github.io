@@ -1,10 +1,22 @@
 'use client'
-// Packages
+
+import { useState } from 'react'
 import Link from 'next/link'
 import styles from 'components/Header/Header.module.css'
 import Image from 'next/image'
 
 export default function Header() {
+    const [copySuccess, setCopySuccess] = useState('Email')
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText('hello@magedabdelsalam.com')
+            .then(() => {
+                setCopySuccess('Copied')
+                setTimeout(() => setCopySuccess('Email'), 2000)
+            })
+            .catch(err => console.error('Try again', err))
+    }
+
     return(
         <header id="top">
             <section>
@@ -19,7 +31,7 @@ export default function Header() {
                             </a>
                         </div>
                     </div>
-                    <Link href="mailto:hello@magedabdelsalam.com" className={styles.cta}>Email</Link>
+                    <button className={styles.cta} onClick={copyToClipboard}>{copySuccess}</button>
                 </div>
             </section>
         </header>
