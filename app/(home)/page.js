@@ -10,7 +10,7 @@ import workshopsData from '../api/workshops/data'
 
 import { usePostHog } from 'posthog-js/react'
 import { useEffect, useState } from 'react'
-
+import Image from 'next/image'
 export default function Home() {
     const posthog = usePostHog()
     const [variant, setVariant] = useState(null)
@@ -59,7 +59,7 @@ export default function Home() {
     return (
         <article>
             <section>
-                <h2>9+ years designing enterprise B2B software.</h2>
+                <h2>10+ years designing enterprise B2B software.</h2>
                 <div className={styles.minicards}>
                     {experiences.map((experience, index) => (
                         <MiniCard key={index} img={experience.img} title={experience.title} description={experience.description}/>
@@ -107,6 +107,14 @@ export default function Home() {
                     </li>
                 </ol>
             </section>
+            {/* <section>
+                <h2>Wall of Designed Chaos</h2>
+                <div>
+                    <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
+                    <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
+                    <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
+                </div>
+            </section> */}
         </article>
     )
 }

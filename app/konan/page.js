@@ -4,9 +4,50 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from 'app/Konan/Page.module.css'
 import Annotation from 'components/Annotation/Annotation'
+import { useState, useRef, useEffect } from 'react'
+import Lightbox from 'components/Lightbox/Lightbox'
+import { useImageNavigation } from 'hooks/useImageNavigation'
 
 export default function Konan() {
-    return <article>
+    const [lightboxImage, setLightboxImage] = useState(null);
+    const [images, setImages] = useState([]);
+    const articleRef = useRef(null);
+
+    const handleImageChange = (index) => {
+        setLightboxImage(images[index]);
+    };
+
+    const [currentIndex, setCurrentIndex] = useImageNavigation(images, handleImageChange);
+
+    useEffect(() => {
+        if (articleRef.current) {
+            const imgElements = articleRef.current.querySelectorAll('figure img');
+            setImages(Array.from(imgElements));
+        }
+    }, []);
+
+    const openLightbox = (index) => {
+        setCurrentIndex(index);
+        setLightboxImage(images[index]);
+    };
+
+    const closeLightbox = () => {
+        setLightboxImage(null);
+    };
+
+    const handlePrev = () => {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        setCurrentIndex(newIndex);
+        handleImageChange(newIndex);
+    };
+
+    const handleNext = () => {
+        const newIndex = (currentIndex + 1) % images.length;
+        setCurrentIndex(newIndex);
+        handleImageChange(newIndex);
+    };
+
+    return <article ref={articleRef}>
         <header>
             <section>
                 <div className={styles.context}>
@@ -18,8 +59,8 @@ export default function Konan() {
                         <span>6 Months</span>
                     </div>
                 </div>
-                <figure>
-                <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
+                <figure onClick={() => openLightbox(0)}>
+                    <Image className={styles.cover} fill={true} src="/projects.png" alt="Projects"/>
                 </figure>
                 <h1>Konan AI</h1>
                 <p>AI credit decision-making for risk officers</p>
@@ -78,33 +119,32 @@ export default function Konan() {
                 <li>Models Marketplace:<p>(Future)</p></li>
                 <li>Common Templates:<p>(Future)</p></li>
             </ul>
-            <figure>
+            <figure onClick={() => openLightbox(1)}>
                 <Image fill={true} src="/usecases.png" alt="Usecases"/>
                 <figcaption>Choosing between use-cases</figcaption>
             </figure>
-            <figure>
+            <figure onClick={() => openLightbox(2)}>
                 <Image fill={true} src="/model.png" alt="Model"/>
                 <figcaption>Viewing at model output</figcaption>
             </figure>
-            <figure>
+            <figure onClick={() => openLightbox(3)}>
                 <Image fill={true} src="/retraining.png" alt="Retraining"/>
                 <figcaption>Viewing retraining model report</figcaption>
             </figure>
-            <figure>
+            <figure onClick={() => openLightbox(4)}>
                 <Image fill={true} src="/workflow.png" alt="Workflow"/>
                 <figcaption>Creating a workflow</figcaption>
             </figure>
-            <figure>
+            <figure onClick={() => openLightbox(5)}>
                 <Image fill={true} src="/blocks.png" alt="Blocks"/>
                 <figcaption>Choosing between different blocks</figcaption>
             </figure>
-            <figure>
+            <figure onClick={() => openLightbox(6)}>
                 <Image fill={true} src="/simulation.png" alt="Simulation"/>
                 <figcaption>Testing different scenarios and viewing reports</figcaption>
             </figure>
-            <figure>
+            <figure onClick={() => openLightbox(7)}>
                 <Image fill={true} src="/live.png" alt="Live"/>
-                <Annotation>Hello world</Annotation>
                 <figcaption>Viewing live data coming in</figcaption>
             </figure>
         </section>
@@ -113,5 +153,14 @@ export default function Konan() {
             <h2>Cultural Change</h2>
             <p>This was one of the most challenging pivots I&apos;ve experienced, but we did it. Changing our focus from MLOPS into Workflows with MLOPS on the side, really challenged the team, as most of us joined the company to work solely on an AI product. But as with any product, things change. This change was great for the company, and our customers.</p>
         </section>
+        {lightboxImage && (
+            <Lightbox
+                src={lightboxImage.src}
+                alt={lightboxImage.alt}
+                onClose={closeLightbox}
+                onPrev={handlePrev}
+                onNext={handleNext}
+            />
+        )}
     </article>
 }

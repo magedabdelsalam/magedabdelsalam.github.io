@@ -11,19 +11,22 @@
 
 .img {
     object-fit: contain;
-	transform: scale(0.9);
+	transform: scale(0.85);
+	transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
-	transform: scale(1.010);
+.card img:hover {
+	transform: scale(0.87) rotate(-0.5deg);
     transform-origin: center;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .content{
 	display: flex;
 	flex-direction: column;
 	padding: 1.5rem;
+}
+.content h3{
+	color: var(--color-00);
 }
 .content p:last-child{
 	margin-bottom: 0;

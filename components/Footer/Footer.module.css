@@ -6,16 +6,6 @@
     justify-content: space-between;
     gap: 1rem;
 }
-.cta{
-    background:var(--color-505);
-    color:var(--color-1000);
-    padding: 0.75rem 1.25rem;
-    border-radius: 1.5rem ;
-}
-.cta:hover{
-    background:var(--color-1000);
-    color:var(--color-100);
-}
 .attn {
     display: flex;
     flex-direction: column;
